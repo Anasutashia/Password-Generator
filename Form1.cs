@@ -36,7 +36,7 @@ namespace test2
                 pass += "MNBVCXZLKJHGFDSAPOIUYTREWQ";
             }
 
-            textBox1.Text = null;
+            /*textBox1.Text = null;
             textBox2.Text = null;
             textBox3.Text = null;
             textBox4.Text = null;
@@ -46,29 +46,38 @@ namespace test2
             textBox8.Text = null;
             textBox9.Text = null;
             textBox10.Text = null;
-
+            */
+            foreach(var tb in this.Controls.OfType < TextBox>()) 
+            {
+                tb.Text = null; 
+            }
             button12.Visible = true;
 
             Random rnd = new Random();
             for (int i = 0; i < numericUpDown1.Value; i++)
              
             {
-               
-                textBox1.Text += pass[rnd.Next(pass.Length)];
-                textBox2.Text += pass[rnd.Next(pass.Length)];
-                textBox3.Text += pass[rnd.Next(pass.Length)];
-                textBox4.Text += pass[rnd.Next(pass.Length)];
-                textBox5.Text += pass[rnd.Next(pass.Length)];
-                textBox6.Text += pass[rnd.Next(pass.Length)];
-                textBox7.Text += pass[rnd.Next(pass.Length)];
-                textBox8.Text += pass[rnd.Next(pass.Length)];
-                textBox9.Text += pass[rnd.Next(pass.Length)];
-                textBox10.Text += pass[rnd.Next(pass.Length)];
+                foreach (var tb in this.Controls.OfType<TextBox>())
+                {
+                    tb.Text += pass[rnd.Next(pass.Length)];
+
+                  /*  textBox1.Text += pass[rnd.Next(pass.Length)];
+                    textBox2.Text += pass[rnd.Next(pass.Length)];
+                    textBox3.Text += pass[rnd.Next(pass.Length)];
+                    textBox4.Text += pass[rnd.Next(pass.Length)];
+                    textBox5.Text += pass[rnd.Next(pass.Length)];
+                    textBox6.Text += pass[rnd.Next(pass.Length)];
+                    textBox7.Text += pass[rnd.Next(pass.Length)];
+                    textBox8.Text += pass[rnd.Next(pass.Length)];
+                    textBox9.Text += pass[rnd.Next(pass.Length)];
+                    textBox10.Text += pass[rnd.Next(pass.Length)]; */
+                }
             }
            
         }
 
-
+        
+        
         private void button2_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(textBox1.Text);
@@ -127,7 +136,11 @@ namespace test2
             if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
             string filename = saveFileDialog1.FileName;
-            System.IO.File.WriteAllText(filename, textBox1.Text+ Environment.NewLine +textBox2.Text + Environment.NewLine +textBox3.Text + Environment.NewLine+ textBox4.Text + Environment.NewLine+ textBox5.Text + Environment.NewLine + textBox6.Text + Environment.NewLine+textBox7.Text + Environment.NewLine+textBox8.Text + Environment.NewLine+textBox9.Text + Environment.NewLine+textBox10.Text);
+            string TextAll = null;
+            foreach (var tb in this.Controls.OfType<TextBox>())
+            { TextAll += tb.Text + Environment.NewLine; };
+            System.IO.File.WriteAllText(filename, TextAll);
+            //System.IO.File.WriteAllText(filename, textBox1.Text+ Environment.NewLine +textBox2.Text + Environment.NewLine +textBox3.Text + Environment.NewLine+ textBox4.Text + Environment.NewLine+ textBox5.Text + Environment.NewLine + textBox6.Text + Environment.NewLine+textBox7.Text + Environment.NewLine+textBox8.Text + Environment.NewLine+textBox9.Text + Environment.NewLine+textBox10.Text);
         }
     }
 }
