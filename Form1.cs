@@ -72,61 +72,23 @@ namespace test2
                     textBox9.Text += pass[rnd.Next(pass.Length)];
                     textBox10.Text += pass[rnd.Next(pass.Length)]; */
                 }
+
             }
            
         }
 
-        
-        
-        private void button2_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            Clipboard.SetText(textBox1.Text);
-        }
+            foreach (var item in this.Controls) // обходим все элементы формы
+            {
+                if (item is Button) // проверяем, что это кнопка
+                {
+                    string t = (string)((Button)sender).Tag;
+                    Clipboard.SetText(t);               //Копирую в буфер tag кнопки, но как сделать, чтобы копировался текст из textBox?
+                }
+            } 
+        }  
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(textBox2.Text);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(textBox3.Text);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(textBox4.Text);
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(textBox5.Text);
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(textBox6.Text);
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(textBox7.Text);
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(textBox8.Text);
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(textBox9.Text);
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(textBox10.Text);
-        }
 
         private void button12_Click(object sender, EventArgs e)
         {
@@ -142,5 +104,7 @@ namespace test2
             System.IO.File.WriteAllText(filename, TextAll);
             //System.IO.File.WriteAllText(filename, textBox1.Text+ Environment.NewLine +textBox2.Text + Environment.NewLine +textBox3.Text + Environment.NewLine+ textBox4.Text + Environment.NewLine+ textBox5.Text + Environment.NewLine + textBox6.Text + Environment.NewLine+textBox7.Text + Environment.NewLine+textBox8.Text + Environment.NewLine+textBox9.Text + Environment.NewLine+textBox10.Text);
         }
+
+      
     }
 }

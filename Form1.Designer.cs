@@ -80,6 +80,8 @@ namespace test2
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(154, 30);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Tag = "2";
+            //this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // checkBox1
             // 
@@ -139,6 +141,7 @@ namespace test2
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(154, 30);
             this.textBox2.TabIndex = 6;
+            this.textBox2.Tag = "3";
             // 
             // textBox3
             // 
@@ -147,6 +150,7 @@ namespace test2
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(154, 30);
             this.textBox3.TabIndex = 7;
+            this.textBox3.Tag = "4";
             // 
             // textBox4
             // 
@@ -155,6 +159,7 @@ namespace test2
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(154, 30);
             this.textBox4.TabIndex = 8;
+            this.textBox4.Tag = "5";
             // 
             // textBox5
             // 
@@ -171,6 +176,7 @@ namespace test2
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(154, 30);
             this.textBox6.TabIndex = 10;
+            this.textBox6.Tag = "7";
             // 
             // textBox7
             // 
@@ -179,6 +185,7 @@ namespace test2
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(154, 30);
             this.textBox7.TabIndex = 11;
+            this.textBox7.Tag = "8";
             // 
             // textBox8
             // 
@@ -187,6 +194,7 @@ namespace test2
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(154, 30);
             this.textBox8.TabIndex = 12;
+            this.textBox8.Tag = "9";
             // 
             // textBox9
             // 
@@ -195,6 +203,7 @@ namespace test2
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(154, 30);
             this.textBox9.TabIndex = 13;
+            this.textBox9.Tag = "10";
             // 
             // textBox10
             // 
@@ -203,6 +212,7 @@ namespace test2
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(154, 30);
             this.textBox10.TabIndex = 14;
+            this.textBox10.Tag = "10";
             // 
             // button2
             // 
@@ -213,8 +223,9 @@ namespace test2
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 30);
             this.button2.TabIndex = 15;
+            this.button2.Tag = "2";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Form1_Load);
             // 
             // button3
             // 
@@ -225,8 +236,9 @@ namespace test2
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 30);
             this.button3.TabIndex = 16;
+            this.button3.Tag = "3";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Form1_Load);
             // 
             // button4
             // 
@@ -236,8 +248,9 @@ namespace test2
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 30);
             this.button4.TabIndex = 17;
+            this.button4.Tag = "4";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.Form1_Load);
             // 
             // button5
             // 
@@ -247,8 +260,9 @@ namespace test2
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(50, 30);
             this.button5.TabIndex = 18;
+            this.button5.Tag = "5";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.Form1_Load);
             // 
             // button6
             // 
@@ -258,8 +272,9 @@ namespace test2
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(50, 30);
             this.button6.TabIndex = 19;
+            this.button6.Tag = "6";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.Form1_Load);
             // 
             // button7
             // 
@@ -269,8 +284,9 @@ namespace test2
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(50, 30);
             this.button7.TabIndex = 20;
+            this.button7.Tag = "7";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.Form1_Load);
             // 
             // button8
             // 
@@ -280,8 +296,9 @@ namespace test2
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(50, 30);
             this.button8.TabIndex = 21;
+            this.button8.Tag = "8";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Click += new System.EventHandler(this.Form1_Load);
             // 
             // button9
             // 
@@ -291,8 +308,9 @@ namespace test2
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(50, 30);
             this.button9.TabIndex = 22;
+            this.button9.Tag = "9";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.Click += new System.EventHandler(this.Form1_Load);
             // 
             // button10
             // 
@@ -302,8 +320,8 @@ namespace test2
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(50, 30);
             this.button10.TabIndex = 23;
+            this.button10.Tag = "10";
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -313,8 +331,9 @@ namespace test2
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(50, 30);
             this.button11.TabIndex = 24;
+            this.button11.Tag = "11";
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button11.Click += new System.EventHandler(this.Form1_Load);
             // 
             // button12
             // 
