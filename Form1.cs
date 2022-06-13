@@ -81,11 +81,10 @@ namespace test2
             {
                 if (item is Button) // проверяем, что это кнопка
                 {
-                    string t = (string)((Button)sender).Tag; // Текст будет копироваться в зависимости от тэга нажатой кнопки                
-                    //Clipboard.SetText(t);   //Копирую в буфер tag кнопки для примера, но как сделать, чтобы копировался текст из textBox?
-                  switch (Convert.ToInt32(t))
+                    string t = (string)((Button)sender).Tag; //Текст будет копироваться в зависимости от тэга нажатой кнопки                            
+                  switch (Convert.ToInt32(t)) //Ненавижу ЯП с строгой типизацией
                     {
-                        case 2: Clipboard.SetText(textBox1.Text); break;
+                        case 2: Clipboard.SetText(textBox1.Text); break;     //case'ы можно загнать в цикл, но как при этом переключать textBox'ы ?
                         case 3: Clipboard.SetText(textBox2.Text); break;
                         case 4: Clipboard.SetText(textBox3.Text); break;
                         case 5: Clipboard.SetText(textBox4.Text); break;
