@@ -72,10 +72,8 @@ namespace test2
                     textBox9.Text += pass[rnd.Next(pass.Length)];
                     textBox10.Text += pass[rnd.Next(pass.Length)]; */
                 }
-
             }
-           
-        }
+        } //End button1_Click
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -83,12 +81,24 @@ namespace test2
             {
                 if (item is Button) // проверяем, что это кнопка
                 {
-                    string t = (string)((Button)sender).Tag;
-                    Clipboard.SetText(t);               //Копирую в буфер tag кнопки, но как сделать, чтобы копировался текст из textBox?
+                    string t = (string)((Button)sender).Tag; // Текст будет копироваться в зависимости от тэга нажатой кнопки                
+                    //Clipboard.SetText(t);   //Копирую в буфер tag кнопки для примера, но как сделать, чтобы копировался текст из textBox?
+                  switch (Convert.ToInt32(t))
+                    {
+                        case 2: Clipboard.SetText(textBox1.Text); break;
+                        case 3: Clipboard.SetText(textBox2.Text); break;
+                        case 4: Clipboard.SetText(textBox3.Text); break;
+                        case 5: Clipboard.SetText(textBox4.Text); break;
+                        case 6: Clipboard.SetText(textBox5.Text); break;
+                        case 7: Clipboard.SetText(textBox6.Text); break;
+                        case 8: Clipboard.SetText(textBox7.Text); break;
+                        case 9: Clipboard.SetText(textBox8.Text); break;
+                        case 10: Clipboard.SetText(textBox9.Text); break;
+                        case 11: Clipboard.SetText(textBox10.Text); break;
+                    }
                 }
-            } 
+            }           
         }  
-
 
         private void button12_Click(object sender, EventArgs e)
         {
@@ -105,6 +115,5 @@ namespace test2
             //System.IO.File.WriteAllText(filename, textBox1.Text+ Environment.NewLine +textBox2.Text + Environment.NewLine +textBox3.Text + Environment.NewLine+ textBox4.Text + Environment.NewLine+ textBox5.Text + Environment.NewLine + textBox6.Text + Environment.NewLine+textBox7.Text + Environment.NewLine+textBox8.Text + Environment.NewLine+textBox9.Text + Environment.NewLine+textBox10.Text);
         }
 
-      
-    }
-}
+    } //End public partial class Form1 : Form
+} //End namespace test2
